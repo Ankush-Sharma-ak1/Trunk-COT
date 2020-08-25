@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: sans-serif;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  label,
+  input,
+  textarea,
+  select {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input,
+  textarea,select {
+    font: inherit;
+    padding: 0.2rem 0.4rem;
+    width: 100%;
+    max-width: 30rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  input:focus,
+  textarea:focus,
+  select {
+    outline: none;
+    background: #fff5f9;
+  }
+  
+  button {
+    font: inherit;
+    background: #546799;;
+    cursor: pointer;
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  button:hover,
+  button:active {
+    background: #4da088;
+  }
+  
+  .projects {
+    margin: 1rem;
+    border: 1px solid #ff0062;
+  }
+  
+  .projects header {
+    background: #ff0062;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #finished-projects {
+    border-color: #0044ff;
+  }
+  
+  #finished-projects header {
+    background: #0044ff;
+  }
+  
+  .projects h2 {
+    margin: 0;
+    color: white;
+  }
+  
+  .projects ul {
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+  }
+  
+  .projects li {
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26);
+    padding: 1rem;
+    margin: 1rem;
+  }
+  
+  .projects li h2 {
+    color: #ff0062;
+    margin: 0.5rem 0;
+  }
+  
+  #finished-projects li h2 {
+    color: #0044ff;
+  }
+  
+  .projects li h3 {
+    color: #575757;
+    font-size: 1rem;
+  }
+  
+  .project li p {
+    margin: 0;
+  }
+  
+  .droppable {
+    background: #ffe3ee;
+  }
+  
+  #finished-projects .droppable {
+    background: #d6e1ff;
+  }
+  
+  #user-input {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid gray;
+    background: #f5ffd6;
+  }
+
+  #app{
+    width: 50%;
+  }
+  .renderDiv {
+    width: 30%;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #ff0062;
+    background: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26);
+    cursor: pointer;
+  }
+    
+  .ticket-desc {
+    overflow: hidden;
+  }
+  .ticket-details{
+    background: white;
+    float: right;
+    position: absolute;
+    top: 30%;
+    left:40%;
+    color: black; 
+    border: 1px solid #ff0062;
+    border-radius: 8px;
+  }
+  .overlay-div {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    opacity: 1.2;
+  }
+  
+  
+ 

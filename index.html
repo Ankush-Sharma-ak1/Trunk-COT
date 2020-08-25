@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ticket Board</title>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css" />
+    <script type="module" src="dist/main.js"></script>
+  </head>
+  <body>
+    <template id="project-input">
+      <form>
+        <div>
+          <label for="title">Title</label>
+          <input type="text" id="title" />
+        </div>
+        <div>
+          <label for="description">Summary</label>
+          <textarea id="description" rows="3"></textarea>
+        </div>
+        <div>
+          <label for="priority">Priority</label>
+          <select name="cars" id="priority">
+            <option value="Normal">Normal</option>
+            <option value="Minor">Minor</option>
+            <option value="Major">Major</option>
+            <option value="Trivial">Trivial</option>
+          </select>
+        </div>
+        <div>
+          <label for="assignee">Assignee</label>
+          <input type="text" id="assignee" />
+        </div>
+        <button type="submit">Add Ticket</button>
+      </form>
+    </template>
+      <div id="app"></div>
+      <div id="ticketRender" class="d-flex flex-wrap"> 
+        <div class=""></div> 
+      </div>
+  </body>
+</html>
