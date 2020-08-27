@@ -1,13 +1,12 @@
 import { TicketController } from "../service/ticket-controller.js";
 import { autobind } from "../decorators/autobind-decorator.js";
 import { LooseObject } from "../service/loose-object.js";
+import { ParentComponent } from "./parent-component.js";
 
 
 //
-export class ProjectInput {
-    templateElement: HTMLTemplateElement;
-    hostElement: HTMLDivElement;
-    element: HTMLElement;
+export class ProjectInput extends ParentComponent<HTMLTemplateElement, HTMLDivElement>{
+   
     titleInputElement: HTMLInputElement;
     descriptionElement: HTMLInputElement;
     priorityInputElement: HTMLInputElement;
@@ -15,13 +14,7 @@ export class ProjectInput {
     ticketController : TicketController;
 
     constructor() {
-        this.templateElement = document.getElementById('project-input')! as HTMLTemplateElement;
-        this.hostElement = document.getElementById('app')! as HTMLDivElement;
-
-        const importedNode = document.importNode(this.templateElement.content, true);
-        this.element = importedNode.firstElementChild as HTMLElement;
-        this.element.id='user-input';
-
+        super('project-input', 'app', 'user-input');
         this.titleInputElement = this.element.querySelector('#title') as HTMLInputElement;
         this.descriptionElement = this.element.querySelector('#description') as HTMLInputElement;
         this.priorityInputElement = this.element.querySelector("#priority") as HTMLInputElement;

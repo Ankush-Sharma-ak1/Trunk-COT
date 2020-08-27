@@ -6,13 +6,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { TicketController } from "../service/ticket-controller.js";
 import { autobind } from "../decorators/autobind-decorator.js";
-export class ProjectInput {
+import { ParentComponent } from "./parent-component.js";
+export class ProjectInput extends ParentComponent {
     constructor() {
-        this.templateElement = document.getElementById('project-input');
-        this.hostElement = document.getElementById('app');
-        const importedNode = document.importNode(this.templateElement.content, true);
-        this.element = importedNode.firstElementChild;
-        this.element.id = 'user-input';
+        super('project-input', 'app', 'user-input');
         this.titleInputElement = this.element.querySelector('#title');
         this.descriptionElement = this.element.querySelector('#description');
         this.priorityInputElement = this.element.querySelector("#priority");

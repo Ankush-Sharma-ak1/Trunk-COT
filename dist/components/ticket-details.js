@@ -10,20 +10,20 @@ export class TicketDetail {
             element.className = 'ticket-details p-3';
             let structure = `<p class="ticket-id"><b>Ticket ID:</b> ${detailObj.id}</p>  
             <div>
-                <label for="title">Title</label>
-                <input type="text" id="title" value=${detailObj.title}> 
+                <label for="title${detailObj.id}">Title</label>
+                <input type="text" id="title${detailObj.id}" value=${detailObj.title}> 
             </div>
             <div>
-              <label for="description">Summary</label>
-              <textarea id="description" rows="3"> ${detailObj.summary}</textarea>
+              <label for="description${detailObj.id}">Summary</label>
+              <textarea id="description${detailObj.id}" rows="3"> ${detailObj.summary}</textarea>
             </div>
             <div>
-                <label for="Priority">Priority</label>
-                <input type="text" id="Priority" value=${detailObj.priority}> 
+                <label for="Priority${detailObj.id}">Priority</label>
+                <input type="text" id="Priority${detailObj.id}" value=${detailObj.priority}> 
           </div>
           <div>
-              <label for="assignee">Assignee</label>
-              <input type="text" id="assignee" value=${detailObj.assignee}>
+              <label for="assignee${detailObj.id}">Assignee</label>
+              <input type="text" id="assignee${detailObj.id}" value=${detailObj.assignee}>
             </div>
             <button id="update-button-${detailObj.id}">Update</button>
             <button id="close-button-${detailObj.id}">Close</button>`;
@@ -46,10 +46,10 @@ export class TicketDetail {
     updateDetails(objectId) {
         console.log(objectId);
         let updatedElement = document.getElementById('ticketDetails' + objectId);
-        let titleElement = updatedElement.querySelector('#title');
-        let summaryElement = updatedElement.querySelector('#description');
-        let priorityElement = updatedElement.querySelector("#Priority");
-        let assigneeElement = updatedElement.querySelector('#assignee');
+        let titleElement = updatedElement.querySelector('#title' + objectId);
+        let summaryElement = updatedElement.querySelector('#description' + objectId);
+        let priorityElement = updatedElement.querySelector("#Priority" + objectId);
+        let assigneeElement = updatedElement.querySelector('#assignee' + objectId);
         const updatedObject = {
             id: objectId,
             title: titleElement.value,
